@@ -1,0 +1,15 @@
+.PHONY: clean
+.SILENT: compile run
+
+JAVA_CLASSES=$$(find *.java | awk '{gsub(/.java/,"")}1')
+
+
+
+compile:
+	javac *.java
+
+run: compile
+	java $(JAVA_CLASSES)
+
+clean:
+	rm -f *.class
