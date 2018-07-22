@@ -1,7 +1,3 @@
-JCC = javac
-JCR = java
-JFLAGS = -g
-
 .PHONY: clean
 .SILENT: Hello.class run
 
