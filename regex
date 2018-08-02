@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Matches the strings 'bog' or 'bug'
+egrep '^b[ou]g$'
+
+# Matches the strings 'there', 'they're', or 'their'
+egrep 'the(i|y\')?r[e]?'
+
+# Matches the strings 'fool', 'foool', or 'fooool'
+egrep 'fo{2,4}l'
+# Matches the words 'fool', 'foool', or 'fooool'
+egrep '\bfo{2,4}l\b'
+
+# Matches the lines containing only 'fool', 'foool', or 'fooool'
+egrep '\nfo{2,4}l\n'
+
+# Matches the strings starting with q and ending with y
+egrep '^q.*?y$'
+
+# Matches the strings starting with j, containing a p, and ending with r
+egrep '^j.*?p.*?r$'
+
+# Matches the strings starting with s, t, or v, have 0-3 more characters, and ending with .txt or .doc
+egrep '[s|t|v].{0,3}(\.txt|\.doc)'
